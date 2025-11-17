@@ -18,6 +18,8 @@ local explosion_x = 0
 local explosion_y =0
 local num_of_frames = 8
 
+local scale = 8
+
 local windowWidth, windowHeight
 
 local spawn_x_offset , spwan_y_offset = 100 , 100
@@ -87,6 +89,6 @@ function love.draw()
 	if enemy_ship ~= nil then enemy_ship:draw() end
 	if explosion_happening then
 		love.graphics.setColor(1,1,1)
-		love.graphics.draw(explosion, explosion_frames[current_frame], explosion_x, explosion_y)
+		love.graphics.draw(explosion, explosion_frames[current_frame], explosion_x - frameWidth*scale/2, explosion_y - frameHeight *scale/2, 0 , scale,scale)
 	end
 end
