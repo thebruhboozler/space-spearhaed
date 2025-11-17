@@ -19,7 +19,6 @@ local thrust_step = 1
 
 local boost_time = 0
 local boost_cool_down = 10
-local side_speed = 30
 
 local desired_rotation = 0
 local desired_thrust = 0
@@ -40,7 +39,7 @@ local evasion_zigzag_time = 3
 
 local lead_x = 0
 local lead_y = 0
-local min_thrust_chase = 3
+local min_thrust_chase = 1
 
 
 local function dist(x1,x2,y1,y2)
@@ -101,7 +100,7 @@ function enemy:update(dt)
 			self:move_right(dt)
 		end
 
-		if curr_time-boost_time < boost_cool_down then
+		if curr_time-boost_time > boost_cool_down then
 			boost_time = curr_time
 			self:boost()
 		end

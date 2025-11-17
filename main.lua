@@ -6,8 +6,8 @@ local ship
 local enemy_ship
 local explosion
 local explosion_frames = {}
-local frameWidth = 64
-local frameHeight = 64
+local frameWidth = 32
+local frameHeight = 32
 
 local current_frame = 1
 local timer = 0
@@ -86,6 +86,7 @@ function love.draw()
 	if ship ~= nil then ship:draw() end
 	if enemy_ship ~= nil then enemy_ship:draw() end
 	if explosion_happening then
+		love.graphics.setColor(1,1,1)
 		love.graphics.draw(explosion, explosion_frames[current_frame], explosion_x, explosion_y)
 	end
 end
