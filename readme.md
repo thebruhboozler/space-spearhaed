@@ -6,9 +6,14 @@
 **controls**
 
 w - increase thrust 
-s - decrease thrust 
-a,d - rotate left or right 
+
+s - decrease thrust
+
+a,d - rotate left or right
+
 space - boost/lunge
+
+q,e - side strafe
 
 ![gameplay image](https://i.postimg.cc/Wz9FkbFg/gameplay.png)
 ![gameplay gif](https://i.postimg.cc/SxbqGb6z/2025-11-17-01-14-51.gif)
